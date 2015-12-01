@@ -8,3 +8,9 @@ Thought it would be a fun project to tackle and become more familiar with using 
 ##TODOs
 1. Make program persistent, keep track of updates, etc. Probably use Z_PK tag ID.
 2. Add Spotify support
+
+##Configuration file example
+```
+[options]
+dir=.../*identifier*.group.com.shazam/com.shazam.mac.Shazam/ShazamDataModel.sqlite
+```

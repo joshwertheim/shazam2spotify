@@ -2,7 +2,7 @@ import sqlite3
 from ConfigParser import SafeConfigParser
 
 class Track(object):
-    """docstring for Track"""
+    """Track class for storing track metadata"""
     def __init__(self, artist, trackname, id):
         self.artist = artist
         self.trackname = trackname
