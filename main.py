@@ -3,10 +3,14 @@ import sqlite3
 def main():
     dbconnection = sqlite3.connect('data/ShazamDataModel.sqlite')
     cursor = dbconnection.cursor()
-    results = cursor.execute("SELECT ZBEACON as ID, ZTRACKNAME as TITLE FROM ZSHTAGRESULTMO")
-
-    # for x in get_ids(results):
-    #     print x
+    results = cursor.execute(
+        '''
+        SELECT artistinfo.ZNAME, taginfo.ZTRACKNAME, taginfo.ZBEACON  
+        FROM ZSHARTISTMO artistinfo 
+        inner join ZSHTAGRESULTMO taginfo 
+        on artistinfo.Z_PK = taginfo.Z_PK
+        '''
+    )
 
     print_rows(results)
 
